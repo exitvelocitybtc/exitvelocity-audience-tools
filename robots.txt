@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://exitvelocitybtc.github.io/exitvelocity-audience-tools/sitemap.xml
