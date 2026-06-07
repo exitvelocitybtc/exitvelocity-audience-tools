@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bitcoin vs Crypto Claim Checker | Exit Velocity</title>
+  <meta name="description" content="A fast claim checker for people hearing that Bitcoin is crypto, crime, Ponzi, fake volume, or FTX. Steelman the criticism, then separate Bitcoin from the casino.">
+  <link rel="canonical" href="https://exitvelocitybtc.github.io/exitvelocity-audience-tools/bitcoin-vs-crypto-claim-checker/">
+  <meta property="og:title" content="Bitcoin vs Crypto Claim Checker">
+  <meta property="og:description" content="Ben McKenzie is right about most of crypto. This tool checks whether the same critique actually lands on Bitcoin.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://exitvelocitybtc.github.io/exitvelocity-audience-tools/bitcoin-vs-crypto-claim-checker/">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Bitcoin vs Crypto Claim Checker","applicationCategory":"EducationalApplication","operatingSystem":"Any","url":"https://exitvelocitybtc.github.io/exitvelocity-audience-tools/bitcoin-vs-crypto-claim-checker/","description":"A fast claim checker for Bitcoin vs crypto criticism.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Is Bitcoin the same thing as crypto?","acceptedAnswer":{"@type":"Answer","text":"This page separates criticism of exchanges, tokens, leverage, fake volume, and fraud from criticism of Bitcoin's settlement network and fixed-supply asset design."}},{"@type":"Question","name":"Is this financial advice?","acceptedAnswer":{"@type":"Answer","text":"No. This is educational commentary and a source checklist, not financial, legal, or tax advice."}},{"@type":"Question","name":"Why build this after the Ben McKenzie rebuttal?","acceptedAnswer":{"@type":"Answer","text":"Because many mainstream critiques correctly identify real crypto failures but then collapse those failures into Bitcoin without checking whether the mechanism is the same."}}]}</script>
+  <style>
+:root{color-scheme:dark;--bg:#080b0f;--panel:#111820;--panel2:#172231;--ink:#f6f0df;--muted:#bac3ca;--amber:#f0a734;--green:#4ac78e;--red:#ef665d;--line:rgba(246,240,223,.16);--blue:#68b7ff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 18% 0%,rgba(240,167,52,.15),transparent 32%),linear-gradient(180deg,#080b0f,#0d1117 50%,#07090c);color:var(--ink)}a{color:inherit}.wrap{width:min(1120px,calc(100% - 32px));margin:0 auto}.nav{height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}.brand{display:flex;align-items:center;gap:10px;font-weight:900}.mark{width:34px;height:34px;display:grid;place-items:center;border:1px solid rgba(240,167,52,.55);background:#111820;color:var(--amber)}.nav a{color:var(--muted);text-decoration:none;font-size:14px}.hero{padding:56px 0 26px;display:grid;grid-template-columns:minmax(0,1fr) 390px;gap:28px;align-items:start}.eyebrow{margin:0 0 12px;color:var(--amber);font-size:13px;font-weight:900;letter-spacing:.08em;text-transform:uppercase}h1{margin:0 0 16px;font-size:clamp(40px,7vw,78px);line-height:.94;letter-spacing:0}h2{margin:0 0 12px;font-size:30px;line-height:1.08}h3{margin:0 0 8px;font-size:19px}.lede{max-width:760px;color:var(--muted);font-size:20px;line-height:1.55}.panel,.claim,.sharebox{border:1px solid var(--line);border-radius:8px;background:linear-gradient(180deg,rgba(22,33,44,.94),rgba(12,18,26,.94));padding:20px}.score{position:sticky;top:16px}.score strong{display:block;font-size:42px;line-height:1;color:var(--amber)}.meter{height:15px;background:#263340;border:1px solid var(--line);margin:14px 0 10px;overflow:hidden}.bar{height:100%;width:0;background:linear-gradient(90deg,var(--red),var(--amber),var(--green));transition:width .2s ease}.small{color:var(--muted);font-size:13px;line-height:1.45}.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 15px;border:1px solid var(--line);border-radius:6px;background:#182330;text-decoration:none;font-weight:850;color:var(--ink)}.btn.primary{background:var(--amber);border-color:var(--amber);color:#1b1205}.btn.green{background:var(--green);border-color:var(--green);color:#04150d}.band{padding:26px 0 46px}.claims{display:grid;gap:14px}.claim{display:grid;grid-template-columns:34px minmax(0,1fr);gap:14px}.num{width:34px;height:34px;border:1px solid rgba(240,167,52,.55);display:grid;place-items:center;color:var(--amber);font-weight:900}.claim p{margin:0;color:var(--muted);line-height:1.55}.verdict{display:inline-flex;margin:8px 0 10px;padding:5px 9px;border-radius:999px;font-size:12px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}.right{background:rgba(74,199,142,.14);color:var(--green);border:1px solid rgba(74,199,142,.38)}.wrong{background:rgba(239,102,93,.14);color:#ff9b94;border:1px solid rgba(239,102,93,.38)}.split{background:rgba(240,167,52,.13);color:var(--amber);border:1px solid rgba(240,167,52,.38)}.source{display:inline-flex;margin-top:10px;color:var(--blue);font-size:13px}.checks{display:grid;gap:10px;margin-top:16px}label.check{display:grid;grid-template-columns:24px 1fr;gap:10px;border:1px solid var(--line);border-radius:6px;background:rgba(8,11,15,.38);padding:12px;cursor:pointer;color:var(--muted);line-height:1.42}input[type=checkbox]{width:18px;height:18px;margin-top:2px;accent-color:var(--amber)}.sharegrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.sharebox p{margin:0;color:var(--muted);line-height:1.5}.copy{width:100%;text-align:left;margin-top:12px;border:1px solid var(--line);background:#0c121a;color:var(--ink);border-radius:6px;padding:10px;font:inherit;cursor:pointer}.footnote{border-top:1px solid var(--line);padding:24px 0 38px;color:var(--muted);font-size:13px;line-height:1.5}@media(max-width:860px){.hero{grid-template-columns:1fr}.score{position:static}.sharegrid{grid-template-columns:1fr}.nav{height:auto;padding:16px 0;align-items:flex-start;gap:10px;flex-direction:column}}
+  </style>
+</head>
+<body>
+  <header class="wrap nav">
+    <div class="brand"><span class="mark">EV</span><span>EXIT VELOCITY</span></div>
+    <nav><a href="../">Free tools</a> &nbsp; <a href="https://business-click-router.exitvelocitybtc.workers.dev/r/ev-rebuttal01?src=claim_checker&medium=nav&campaign=rebuttal01">Watch the Rebuttal</a></nav>
+  </header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <p class="eyebrow">The Weekly Rebuttal companion tool</p>
+        <h1>Bitcoin is not the casino.</h1>
+        <p class="lede">A fast claim checker for people hearing that Bitcoin is just crypto fraud, Ponzi math, fake volume, FTX, or crime. Steelman the critique first. Then check whether it actually lands on Bitcoin.</p>
+        <div class="actions">
+          <a class="btn primary" href="#claims">Check the claims</a>
+          <a class="btn" href="https://business-click-router.exitvelocitybtc.workers.dev/r/ev-rebuttal01?src=claim_checker&medium=hero&campaign=rebuttal01">Watch full breakdown</a>
+          <a class="btn green" href="https://business-click-router.exitvelocitybtc.workers.dev/r/ev-substack?src=claim_checker&medium=hero&campaign=owned_audience">Get the next Rebuttal</a>
+        </div>
+      </div>
+      <aside class="score panel">
+        <h2>Run the collapse test</h2>
+        <p class="small">Check every box that describes the claim you heard. The result tells you whether the critique is about Bitcoin, crypto casinos, or both.</p>
+        <div class="checks">
+          <label class="check"><input type="checkbox" data-kind="casino"> The argument depends on exchanges, tokens, leverage, celebrity shills, or offshore markets.</label>
+          <label class="check"><input type="checkbox" data-kind="bitcoin"> The argument identifies a Bitcoin protocol rule: fixed supply, settlement, mining, fees, custody, or keys.</label>
+          <label class="check"><input type="checkbox" data-kind="casino"> The evidence is FTX, Celsius, Terra/Luna, wash trading, or yield products.</label>
+          <label class="check"><input type="checkbox" data-kind="bitcoin"> The evidence is a direct Bitcoin network failure, not a company using Bitcoin branding.</label>
+        </div>
+        <div class="meter"><div id="bar" class="bar"></div></div>
+        <strong id="score">Split it apart</strong>
+        <p id="result" class="small">Most bad crypto arguments are real. The mistake is collapsing them into Bitcoin without checking the mechanism.</p>
+      </aside>
+    </section>
+
+    <section id="claims" class="wrap band">
+      <h2>Seven claims worth separating</h2>
+      <div class="claims">
+        <article class="claim">
+          <div class="num">1</div>
+          <div>
+            <h3>“Crypto is full of fraud.”</h3>
+            <span class="verdict right">Right about crypto</span>
+            <p>FTX, Celsius, Terra/Luna, leverage, fake yield, and influencer promotion were real failures. Treating that as proof of Bitcoin failure skips the mechanism: Bitcoin has no company promising yield and no exchange balance sheet to trust.</p>
+          </div>
+        </article>
+        <article class="claim">
+          <div class="num">2</div>
+          <div>
+            <h3>“Most reported Bitcoin volume was fake.”</h3>
+            <span class="verdict split">Real problem, wrong conclusion</span>
+            <p>Bitwise told the SEC in 2019 that much reported spot Bitcoin volume was fake or non-economic. That exposed offshore exchange reporting, not a hidden supply switch inside Bitcoin.</p>
+            <a class="source" href="https://www.sec.gov/comments/sr-nysearca-2019-01/srnysearca201901-5574233-185408.pdf">Source: Bitwise submission to SEC</a>
+          </div>
+        </article>
+        <article class="claim">
+          <div class="num">3</div>
+          <div>
+            <h3>“Crypto is mainly crime.”</h3>
+            <span class="verdict split">Needs denominator discipline</span>
+            <p>Crime exists and should not be hand-waved. But the right question is share of activity, asset type, and venue. Chainalysis estimated illicit activity as a small share of attributed crypto transaction volume in 2024, while stablecoins are now a major part of crypto activity.</p>
+            <a class="source" href="https://www.chainalysis.com/blog/2025-crypto-crime-report-introduction/">Source: Chainalysis 2025 Crypto Crime Trends</a>
+          </div>
+        </article>
+        <article class="claim">
+          <div class="num">4</div>
+          <div>
+            <h3>“Bitcoin is a Ponzi.”</h3>
+            <span class="verdict wrong">Mechanically weak</span>
+            <p>A Ponzi needs an operator, promised returns, and old buyers paid with new buyer money. Bitcoin can be overhyped and badly bought, but the protocol does not promise yield or run a payout scheme.</p>
+          </div>
+        </article>
+        <article class="claim">
+          <div class="num">5</div>
+          <div>
+            <h3>“FTX disproved Bitcoin.”</h3>
+            <span class="verdict wrong">FTX proved custody risk</span>
+            <p>FTX was a centralized exchange failure. It made the oldest Bitcoin warning more relevant, not less: if someone else controls the keys, you are trusting their solvency, honesty, and controls.</p>
+          </div>
+        </article>
+        <article class="claim">
+          <div class="num">6</div>
+          <div>
+            <h3>“You can’t buy coffee with it.”</h3>
+            <span class="verdict split">Fair, but incomplete</span>
+            <p>Most holders use Bitcoin as savings, not daily checkout money. That is a valid criticism if the claim is “everyday payments today.” It is weaker if the claim is “scarce digital settlement asset.”</p>
+          </div>
+        </article>
+        <article class="claim">
+          <div class="num">7</div>
+          <div>
+            <h3>“The hypocrisy is real.”</h3>
+            <span class="verdict right">Yes, and it matters</span>
+            <p>People who talked anti-bank ideals while begging for bailouts deserve criticism. The question is whether the thing left standing is a casino chip or the one asset in the casino with no house, no rake, and no printable supply.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="wrap band">
+      <h2>Shareable angles</h2>
+      <div class="sharegrid">
+        <article class="sharebox">
+          <h3>Nostr / Bluesky</h3>
+          <p>Ben McKenzie is right about most of crypto. The casino, leverage, shills, and fraud are real. The question is whether that critique lands on Bitcoin, or on companies people trusted instead of holding keys.</p>
+          <button class="copy" data-copy="Ben McKenzie is right about most of crypto. The casino, leverage, shills, and fraud are real. The question is whether that critique lands on Bitcoin, or on companies people trusted instead of holding keys.">Copy native post</button>
+        </article>
+        <article class="sharebox">
+          <h3>Telegram / Discord</h3>
+          <p>New free Exit Velocity tool: Bitcoin vs Crypto Claim Checker. It separates FTX/fake volume/crime/Ponzi arguments from actual Bitcoin protocol claims.</p>
+          <button class="copy" data-copy="New free Exit Velocity tool: Bitcoin vs Crypto Claim Checker. It separates FTX/fake volume/crime/Ponzi arguments from actual Bitcoin protocol claims.">Copy channel post</button>
+        </article>
+        <article class="sharebox">
+          <h3>Search hook</h3>
+          <p>Use this when someone searches “is Bitcoin a Ponzi,” “Bitcoin vs crypto,” “Bitcoin crime,” or “Ben McKenzie Bitcoin.”</p>
+          <button class="copy" data-copy="Bitcoin vs crypto claim checker: a fast way to separate real crypto criticism from claims that actually apply to Bitcoin.">Copy search caption</button>
+        </article>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://business-click-router.exitvelocitybtc.workers.dev/r/ev-rebuttal01?src=claim_checker&medium=footer&campaign=rebuttal01">Watch The Weekly Rebuttal 01</a>
+        <a class="btn" href="https://business-click-router.exitvelocitybtc.workers.dev/r/ev-records?src=claim_checker&medium=footer&campaign=records_checkup">Run the Bitcoin Records Checkup</a>
+        <a class="btn green" href="https://business-click-router.exitvelocitybtc.workers.dev/r/ev-substack?src=claim_checker&medium=footer&campaign=owned_audience">Subscribe for the next one</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap footnote">
+    Educational commentary only. Not financial, legal, or tax advice. This page engages public arguments and does not recommend buying or selling Bitcoin. Sources used for context include Chainalysis 2025 Crypto Crime Trends and Bitwise's 2019 submission to the SEC.
+  </footer>
+  <script>
+    const boxes = [...document.querySelectorAll('input[type="checkbox"]')];
+    const score = document.getElementById('score');
+    const result = document.getElementById('result');
+    const bar = document.getElementById('bar');
+    function update() {
+      const casino = boxes.filter(b => b.checked && b.dataset.kind === 'casino').length;
+      const bitcoin = boxes.filter(b => b.checked && b.dataset.kind === 'bitcoin').length;
+      const total = casino + bitcoin;
+      bar.style.width = Math.min(100, total * 25) + '%';
+      if (!total) {
+        score.textContent = 'Split it apart';
+        result.textContent = 'Most bad crypto arguments are real. The mistake is collapsing them into Bitcoin without checking the mechanism.';
+      } else if (casino > bitcoin) {
+        score.textContent = 'Mostly casino';
+        result.textContent = 'This sounds mainly like an exchange/token/leverage critique. Strong criticism, but not automatically a Bitcoin protocol critique.';
+      } else if (bitcoin > casino) {
+        score.textContent = 'Actually Bitcoin';
+        result.textContent = 'This claim points at Bitcoin itself. Now inspect the protocol rule directly instead of arguing about FTX or altcoin failures.';
+      } else {
+        score.textContent = 'Mixed claim';
+        result.textContent = 'This combines a real crypto failure with a Bitcoin claim. Separate the company, market venue, custody model, and protocol before deciding.';
+      }
+    }
+    boxes.forEach(b => b.addEventListener('change', update));
+    document.querySelectorAll('.copy').forEach(button => {
+      button.addEventListener('click', async () => {
+        const link = ' https://business-click-router.exitvelocitybtc.workers.dev/r/ev-claim-checker?src=manual_social&medium=social&campaign=claim_checker';
+        await navigator.clipboard.writeText(button.dataset.copy + link);
+        button.textContent = 'Copied';
+        setTimeout(() => { button.textContent = button.dataset.copy.startsWith('New free') ? 'Copy channel post' : button.dataset.copy.startsWith('Bitcoin vs') ? 'Copy search caption' : 'Copy native post'; }, 1400);
+      });
+    });
+    update();
+  </script>
+</body>
+</html>
