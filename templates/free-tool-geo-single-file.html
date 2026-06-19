@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{QUERY_ANSWER_TITLE}} | {{BRAND}}</title>
+  <link rel="canonical" href="{{CANONICAL_URL}}">
+  <meta name="description" content="{{META_DESCRIPTION}}">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{OG_TITLE}}">
+  <meta property="og:description" content="{{OG_DESCRIPTION}}">
+  <meta property="og:url" content="{{CANONICAL_URL}}">
+  <meta property="og:image" content="{{OG_IMAGE_URL}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "{{TOOL_NAME}}",
+        "url": "{{CANONICAL_URL}}",
+        "applicationCategory": "{{APPLICATION_CATEGORY}}",
+        "operatingSystem": "Web",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "publisher": {"@type": "Organization", "name": "{{BRAND}}"},
+        "description": "{{TOOL_DESCRIPTION}}"
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {"@type": "Question", "name": "{{FAQ_Q1}}", "acceptedAnswer": {"@type": "Answer", "text": "{{FAQ_A1}}"}},
+          {"@type": "Question", "name": "{{FAQ_Q2}}", "acceptedAnswer": {"@type": "Answer", "text": "{{FAQ_A2}}"}}
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "name": "{{HOWTO_NAME}}",
+        "step": [
+          {"@type": "HowToStep", "text": "{{STEP_1}}"},
+          {"@type": "HowToStep", "text": "{{STEP_2}}"},
+          {"@type": "HowToStep", "text": "{{STEP_3}}"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <p>{{BRAND}}</p>
+    <h1>{{QUERY_ANSWER_H1}}</h1>
+    <p>{{FRONT_LOADED_ANSWER}}</p>
+  </header>
+  <main>
+    <section id="tool">{{INTERACTIVE_TOOL}}</section>
+    <section id="answer">{{EXPLANATION_AND_SOURCES}}</section>
+    <section id="capture">{{EMAIL_CAPTURE_OR_SUBSCRIBE_FLOW}}</section>
+    <section id="paid-cta">{{SOFT_PAID_PRODUCT_CTA}}</section>
+  </main>
+  <footer>{{DISCLAIMER}}</footer>
+</body>
+</html>

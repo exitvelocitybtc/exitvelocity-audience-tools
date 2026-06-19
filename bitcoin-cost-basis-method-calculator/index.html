@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bitcoin Cost-Basis Calculator: FIFO vs HIFO vs Spec-ID (Free, No Signup) | Exit Velocity</title>
+<meta name="description" content="Free Bitcoin cost-basis calculator. Enter your buys and a sale to see your capital gain under FIFO, HIFO, and LIFO side by side — and which method saves you the most. FIFO is the IRS default; HIFO usually lowers your gain. Educational, not tax advice.">
+<link rel="canonical" href="https://exitvelocitybtc.github.io/exitvelocity-audience-tools/bitcoin-cost-basis-method-calculator/">
+<link rel="icon" type="image/png" href="../assets/ev-profile-800-official.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bitcoin Cost-Basis Calculator: FIFO vs HIFO vs Spec-ID">
+<meta property="og:description" content="See your Bitcoin capital gain under FIFO, HIFO, and LIFO side by side — and which saves you the most. Free, no signup.">
+<meta property="og:url" content="https://exitvelocitybtc.github.io/exitvelocity-audience-tools/bitcoin-cost-basis-method-calculator/">
+<meta property="og:image" content="https://exitvelocitybtc.github.io/exitvelocity-audience-tools/assets/og/bitcoin-cost-basis-method-calculator.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://exitvelocitybtc.github.io/exitvelocity-audience-tools/assets/og/bitcoin-cost-basis-method-calculator.png">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#0d0f12">
+<!-- GEO/SEO structured data: SoftwareApplication + FAQ + HowTo -->
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"SoftwareApplication",
+      "name":"Bitcoin Cost-Basis Method Calculator (FIFO vs HIFO vs Spec-ID)",
+      "applicationCategory":"FinanceApplication",
+      "operatingSystem":"Web",
+      "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+      "description":"Free tool that compares your Bitcoin capital gain under FIFO, HIFO, and LIFO cost-basis methods and shows which one minimizes your taxable gain.",
+      "url":"https://exitvelocitybtc.github.io/exitvelocity-audience-tools/bitcoin-cost-basis-method-calculator/",
+      "publisher":{"@type":"Organization","name":"Exit Velocity"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"What is Bitcoin cost basis?","acceptedAnswer":{"@type":"Answer","text":"Cost basis is what you originally paid for the Bitcoin you sold, including fees. Your capital gain is the sale proceeds minus the cost basis of the specific coins (lots) treated as sold."}},
+        {"@type":"Question","name":"What is the difference between FIFO, HIFO, and Spec-ID for crypto?","acceptedAnswer":{"@type":"Answer","text":"FIFO (First In, First Out) treats your earliest-bought coins as sold first. HIFO (Highest In, First Out) treats your highest-cost coins as sold first. LIFO uses your latest-bought coins first. HIFO and LIFO are forms of Specific Identification (Spec-ID), where you choose which lots are sold."}},
+        {"@type":"Question","name":"Which cost-basis method saves the most on Bitcoin taxes?","acceptedAnswer":{"@type":"Answer","text":"HIFO usually produces the lowest current taxable gain because it sells your highest-cost coins first. But it requires meticulous records, and in a rising market the highest-cost lots are often short-term, which can be taxed at higher ordinary-income rates. The best method depends on your situation."}},
+        {"@type":"Question","name":"What does the IRS require for choosing a cost-basis method?","acceptedAnswer":{"@type":"Answer","text":"If you do not specifically identify which units you sold, the IRS applies FIFO by default. To use Specific Identification (including HIFO or LIFO), you must identify the specific units no later than the date and time of the transaction and keep contemporaneous records."}}
+      ]
+    },
+    {
+      "@type":"HowTo",
+      "name":"How to compare Bitcoin cost-basis methods",
+      "step":[
+        {"@type":"HowToStep","text":"Enter each Bitcoin purchase (date, amount in BTC, and price per BTC)."},
+        {"@type":"HowToStep","text":"Enter the Bitcoin sale (amount in BTC and sale price per BTC)."},
+        {"@type":"HowToStep","text":"The tool computes your capital gain under FIFO, HIFO, and LIFO and shows which method minimizes your taxable gain."}
+      ]
+    }
+  ]
+}
+</script>
+<style>
+:root{--bg:#0d0f12;--panel:#161a20;--line:#262c34;--ink:#eef2f4;--muted:#9aa6b1;--accent:#f7931a;--green:#34c77b;--red:#e0556a}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+.wrap{max-width:860px;margin:0 auto;padding:28px 18px 80px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.02em}
+.brand .mark{width:30px;height:30px;object-fit:contain;display:block}
+.eyebrow{color:var(--accent);text-transform:uppercase;font-size:12px;letter-spacing:.14em;font-weight:800;margin-top:26px}
+h1{font-size:30px;line-height:1.15;margin:8px 0 10px}
+.lede{color:var(--muted);font-size:17px;max-width:680px}
+.answer{background:var(--panel);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:16px 18px;margin:18px 0}
+.answer b{color:var(--ink)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;margin:18px 0}
+h2{font-size:21px;margin:0 0 12px}
+label{display:block;font-size:13px;color:var(--muted);margin:0 0 5px}
+input{width:100%;background:#0f1318;border:1px solid var(--line);border-radius:9px;color:var(--ink);padding:10px 11px;font-size:15px}
+.lot{display:grid;grid-template-columns:1.1fr 1fr 1fr auto;gap:10px;align-items:end;margin-bottom:10px}
+.lot .x{background:none;border:1px solid var(--line);color:var(--muted);border-radius:9px;height:42px;width:42px;cursor:pointer;font-size:18px}
+.btn{display:inline-block;background:var(--accent);color:#1a1205;font-weight:800;border:none;border-radius:10px;padding:12px 18px;font-size:15px;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line);font-weight:600}
+.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.sale{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.results{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:6px}
+.res{background:#0f1318;border:1px solid var(--line);border-radius:12px;padding:14px}
+.res .m{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.res .g{font-size:24px;font-weight:800;margin:6px 0 2px}
+.res .b{font-size:13px;color:var(--muted)}
+.res.best{border-color:var(--green);box-shadow:0 0 0 1px var(--green) inset}
+.badge{display:inline-block;font-size:11px;font-weight:800;color:#06301c;background:var(--green);padding:2px 8px;border-radius:999px;margin-top:8px}
+.verdict{margin-top:14px;font-size:15px}
+.gain-pos{color:var(--red)}.gain-neg{color:var(--green)}
+.qa h3{font-size:16px;margin:18px 0 4px}
+.qa p{color:var(--muted);margin:0 0 10px}
+.sources{font-size:13px;color:var(--muted)}
+.sources a{color:var(--accent)}
+.disclaim{font-size:12px;color:var(--muted);margin-top:14px;border-top:1px solid var(--line);padding-top:12px}
+.cta{background:linear-gradient(135deg,#1c2430,#11161c);border:1px solid var(--line);border-radius:14px;padding:20px;margin:22px 0}
+.cta input{margin:10px 0}
+.small{font-size:12px;color:var(--muted)}
+@media(max-width:640px){.lot{grid-template-columns:1fr 1fr;}.lot .x{grid-column:span 2;width:100%}.results{grid-template-columns:1fr}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="brand"><img class="mark" src="../assets/ev-logo-fire.png" alt="" width="30" height="30"> Exit Velocity</div>
+
+  <div class="eyebrow">Free Bitcoin tax tool · no signup</div>
+  <h1>Which Bitcoin did you sell? FIFO vs HIFO vs Spec-ID</h1>
+  <p class="lede">Enter your buys and one sale. This free calculator shows your capital gain under each cost-basis method side by side — and which one lowers your taxable gain the most.</p>
+
+  <div class="answer">
+    <b>Short answer:</b> The IRS uses <b>FIFO</b> (oldest coins first) by default. <b>HIFO</b> (highest-cost coins first) usually produces the <b>lowest</b> current taxable gain — but to use it you must <b>specifically identify</b> the lots <b>at the time of the sale</b> and keep records. This tool shows the dollar difference on your own numbers.
+  </div>
+
+  <div class="card">
+    <h2>1. Your Bitcoin buys</h2>
+    <div id="lots"></div>
+    <div class="row"><button class="btn ghost" id="addLot">+ Add a buy</button></div>
+  </div>
+
+  <div class="card">
+    <h2>2. Your sale</h2>
+    <div class="sale">
+      <div><label>BTC sold</label><input id="sBtc" type="number" step="any" placeholder="e.g. 0.5"></div>
+      <div><label>Sale price per BTC ($)</label><input id="sPrice" type="number" step="any" placeholder="e.g. 95000"></div>
+    </div>
+    <div class="row" style="margin-top:14px"><button class="btn" id="calc">Compare methods</button></div>
+  </div>
+
+  <div class="card" id="out" style="display:none">
+    <h2>3. Your capital gain by method</h2>
+    <div class="results" id="results"></div>
+    <div class="verdict" id="verdict"></div>
+    <div class="disclaim">Educational estimate only — not tax, legal, or financial advice. Assumes a single U.S. taxable sale and does not handle fees, wash sales, holding-period tax rates, or partial-year specifics. Confirm with a qualified professional.</div>
+  </div>
+
+  <div class="cta">
+    <b>Want this done automatically for every trade?</b>
+    <p class="small">Get the Exit Velocity Bitcoin cost-basis tracker — log every buy and sale, pick your method, and export Form 8949-ready records. Plus the free Receipts newsletter on sound money.</p>
+    <form id="capture" action="https://exitvelocitybtc.substack.com/subscribe" method="get" target="_blank" rel="noopener">
+      <input type="email" name="email" placeholder="you@email.com" required>
+      <button class="btn" type="submit">Get the tracker + newsletter</button>
+    </form>
+    <p class="small"><a href="https://exitvelocity.gumroad.com/l/zdorey?utm_source=ev_cost_basis_tool&amp;utm_medium=free_tool&amp;utm_campaign=fifo_hifo_specid" target="_blank" rel="noopener" style="color:var(--accent)">Open the Bitcoin cost-basis tracker</a></p>
+    <p class="small">No spam. Unsubscribe anytime. Delivered by Substack.</p>
+  </div>
+
+  <div class="card qa">
+    <h2>FIFO vs HIFO vs Spec-ID — explained</h2>
+    <h3>What is cost basis?</h3>
+    <p>Cost basis is what you originally paid for the Bitcoin you sold (including fees). Your capital gain is the sale proceeds minus the cost basis of the specific coins ("lots") treated as sold.</p>
+    <h3>FIFO, HIFO, LIFO — what's the difference?</h3>
+    <p><b>FIFO</b> (First In, First Out): your earliest-bought coins are sold first. <b>HIFO</b> (Highest In, First Out): your highest-cost coins are sold first. <b>LIFO</b> (Last In, First Out): your most recent coins are sold first. HIFO and LIFO are forms of <b>Specific Identification (Spec-ID)</b>, where you choose which lots are sold.</p>
+    <h3>Which method saves the most on Bitcoin taxes?</h3>
+    <p><b>HIFO</b> usually produces the lowest current taxable gain because it disposes of your highest-cost coins first. The catch: it needs meticulous records, and in a rising market the highest-cost lots are often short-term, which can be taxed at higher ordinary-income rates. The best method depends on your situation.</p>
+    <h3>What does the IRS require?</h3>
+    <p>If you don't specifically identify which units you sold, the IRS applies <b>FIFO by default</b>. To use Specific Identification (including HIFO or LIFO), you must identify the specific units <b>no later than the date and time of the transaction</b> and keep contemporaneous records.</p>
+    <div class="sources">Sources: <a href="https://www.irs.gov/instructions/i8949" rel="nofollow noopener" target="_blank">IRS Form 8949 instructions</a> · <a href="https://www.irs.gov/filing/digital-assets" rel="nofollow noopener" target="_blank">IRS Digital Assets</a>. Reflects U.S. rules as of 2026.</div>
+  </div>
+
+  <p class="small">© Exit Velocity · Bitcoin-only education. Educational use only; not financial, tax, or legal advice.</p>
+</main>
+
+<script>
+(function(){
+  var lotsEl=document.getElementById('lots');
+  function lotRow(){
+    var d=document.createElement('div');d.className='lot';
+    d.innerHTML='<div><label>Buy date</label><input type="date" class="ld"></div>'+
+      '<div><label>BTC bought</label><input type="number" step="any" class="lb" placeholder="0.25"></div>'+
+      '<div><label>Price per BTC ($)</label><input type="number" step="any" class="lp" placeholder="40000"></div>'+
+      '<button class="x" title="Remove">&times;</button>';
+    d.querySelector('.x').onclick=function(){d.remove();};
+    lotsEl.appendChild(d);
+  }
+  document.getElementById('addLot').onclick=lotRow;
+  lotRow();lotRow(); // start with two buys
+
+  function readLots(){
+    var out=[];
+    lotsEl.querySelectorAll('.lot').forEach(function(r){
+      var date=r.querySelector('.ld').value;
+      var btc=parseFloat(r.querySelector('.lb').value);
+      var price=parseFloat(r.querySelector('.lp').value);
+      if(btc>0&&price>=0){out.push({date:date||'',btc:btc,price:price});}
+    });
+    return out;
+  }
+
+  // consume `qty` BTC from an ordered list of lots; return total cost basis used
+  function basisFor(order,qty){
+    var lots=order.map(function(l){return {btc:l.btc,price:l.price};});
+    var remaining=qty, basis=0;
+    for(var i=0;i<lots.length&&remaining>1e-12;i++){
+      var take=Math.min(lots[i].btc,remaining);
+      basis+=take*lots[i].price;
+      remaining-=take;
+    }
+    return {basis:basis, short: remaining>1e-9 ? remaining : 0};
+  }
+
+  function fmt(n){return (n<0?'-':'')+'$'+Math.abs(n).toLocaleString(undefined,{maximumFractionDigits:0});}
+
+  document.getElementById('calc').onclick=function(){
+    var lots=readLots();
+    var sBtc=parseFloat(document.getElementById('sBtc').value);
+    var sPrice=parseFloat(document.getElementById('sPrice').value);
+    if(!lots.length||!(sBtc>0)||!(sPrice>=0)){alert('Add at least one buy, plus the BTC sold and sale price.');return;}
+    var proceeds=sBtc*sPrice;
+    // FIFO: earliest first (by date asc; undated keep input order)
+    var fifo=lots.slice().sort(function(a,b){return (a.date||'')<(b.date||'')?-1:(a.date||'')>(b.date||'')?1:0;});
+    // LIFO: latest first
+    var lifo=fifo.slice().reverse();
+    // HIFO: highest price first
+    var hifo=lots.slice().sort(function(a,b){return b.price-a.price;});
+    var methods=[['FIFO',fifo,'IRS default'],['HIFO',hifo,'Spec-ID · usually lowest gain'],['LIFO',lifo,'Spec-ID']];
+    var rows=methods.map(function(m){
+      var r=basisFor(m[1],sBtc);
+      return {name:m[0],note:m[2],basis:r.basis,gain:proceeds-r.basis,short:r.short};
+    });
+    var anyShort=rows[0].short>0;
+    var minGain=Math.min.apply(null,rows.map(function(r){return r.gain;}));
+    var maxGain=Math.max.apply(null,rows.map(function(r){return r.gain;}));
+    var html=rows.map(function(r){
+      var best=r.gain===minGain;
+      var cls=r.gain>=0?'gain-pos':'gain-neg';
+      return '<div class="res'+(best?' best':'')+'">'+
+        '<div class="m">'+r.name+'</div>'+
+        '<div class="g '+cls+'">'+fmt(r.gain)+'</div>'+
+        '<div class="b">basis '+fmt(r.basis)+'</div>'+
+        (best?'<div class="badge">Lowest gain</div>':'')+
+        '</div>';
+    }).join('');
+    document.getElementById('results').innerHTML=html;
+    var save=maxGain-minGain;
+    var v='Proceeds: <b>'+fmt(proceeds)+'</b>. ';
+    if(save>0.5){v+='Choosing the lowest-gain method (HIFO/Spec-ID) reports about <b class="gain-neg">'+fmt(save)+' less gain</b> than the highest — but you must identify those lots <b>at the time of sale</b> to use it.';}
+    else{v+='Every method gives the same result here (your lots have the same cost).';}
+    if(anyShort){v+='<br><br><span class="gain-pos">Note:</span> you entered less BTC bought than sold, so basis is incomplete — add the rest of your buys.';}
+    document.getElementById('verdict').innerHTML=v;
+    document.getElementById('out').style.display='block';
+    document.getElementById('out').scrollIntoView({behavior:'smooth',block:'start'});
+  };
+})();
+</script>
+</body>
+</html>
